@@ -1,0 +1,51 @@
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: yellow;
+  font-family: "Viner Hand ITC", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Viner Hand ITC", sans-serif;
+}
+
+body {
+    background: #940005;
+}
+
+table{
+      width: 75%;
+      position: absolute;
+      table-layout: fixed;
+      top: 50%;
+      left: 50%;
+      border-color: yellow;
+      transform: translate(-50%,-50%);
+      font-family: "Viner Hand ITC", sans-serif;
+      word-wrap: break-word;
+ }
+ .heading{
+      border-color: yellow;
+      color: yellow;
+      font-size: 20px;
+      font-family: "Viner Hand ITC", sans-serif;
+ }
+ .heading th{
+      padding: 10px 0;
+ }
+ .data{
+      text-align: center;
+      font-size: 15px;
+      font-family: "Viner Hand ITC", sans-serif;
+      color: #FFFF;
+ }
+ .data td{
+      padding: 15px 0;
+ }
+ div {
+     font-size: 25px;
+     color: yellow;
+     font-family: "Viner Hand ITC", sans-serif;
+ }

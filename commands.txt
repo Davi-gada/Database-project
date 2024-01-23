@@ -1,0 +1,41 @@
+
+
+Complete Version of Commands
+
+
+ create table MENU(mname varchar(100), price float NOT NULL,
+ category varchar(100) NOT NULL, primary key(mname));
+
+ create table CUSTOMER(cname varchar(100), email varchar(100) NOT NULL,
+ phone varchar(100) NOT NULL, paymethod varchar(100) NOT NULL, primary key(cname));
+
+ create table ORDERS (orderno integer AUTO_INCREMENT,
+ cname VARCHAR(100) UNIQUE,
+ primary key (orderno),
+ foreign key (cname) references CUSTOMER
+ (cname) on delete cascade on update cascade);
+
+ create table CONTAINS (itemno integer AUTO_INCREMENT,
+ orderno integer,
+ mname varchar(100),
+ primary key (itemno, orderno),
+ foreign key (orderno) references ORDERS
+ (orderno) on delete cascade on update cascade,
+ foreign key (mname) references MENU
+ (mname) on delete cascade on update cascade);
+
+ create table DINE_IN (orderno integer AUTO_INCREMENT,
+ timeslot varchar(15) NOT NULL, peopleno varchar(4) NOT NULL,
+ cname varchar(100) UNIQUE, primary key (orderno), foreign key (cname) references
+ CUSTOMER (cname) on delete cascade on update cascade );
+
+ create table DELIVERY (orderno integer AUTO_INCREMENT,
+ deltime varchar(5) NOT NULL, address varchar(100) NOT NULL,
+ cname varchar(100) UNIQUE, primary key (orderno),
+ foreign key (cname) references CUSTOMER (cname) on delete
+ cascade on update cascade);
+
+ create table TAKEOUT (orderno integer AUTO_INCREMENT,
+ taketime varchar(5) NOT NULL,  cname varchar(100) UNIQUE,
+ primary key (orderno), foreign key (cname) references CUSTOMER
+ (cname)on delete cascade on update cascade );
