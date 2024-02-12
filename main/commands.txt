@@ -1,6 +1,6 @@
 
 
-Complete Version of Commands
+Complete Version of all Commands
 
 
  create table MENU(mname varchar(100), price float NOT NULL,
